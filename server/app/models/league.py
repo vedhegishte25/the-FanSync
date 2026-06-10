@@ -1,0 +1,14 @@
+from sqlalchemy import Column, Integer, String
+from app.db.base import Base
+
+
+class League(Base):
+    __tablename__ = "leagues"
+
+    id = Column(Integer, primary_key=True, index=True)
+    external_id = Column(Integer, unique=True, index=True)
+    name = Column(String, nullable=False)
+    sport = Column(String, nullable=False)
+    country = Column(String, nullable=True)
+    logo_url = Column(String, nullable=True)
+    season = Column(Integer, nullable=True)
