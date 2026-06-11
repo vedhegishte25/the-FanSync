@@ -2,7 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.db.init_db import init_db
-from app.api.routers import football, cricket, live, standings, news, insights
+from app.api.routers import football
+from app.api.routers import cricket
+from app.api.routers import live
+from app.api.routers import standings
+from app.api.routers import news
+from app.api.routers import insights
 
 
 app = FastAPI(

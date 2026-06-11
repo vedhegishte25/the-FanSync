@@ -1,3 +1,5 @@
+"use client";
+
 import { formatDate } from "@/lib/utils";
 
 interface NewsArticle {
@@ -15,11 +17,9 @@ interface NewsCardProps {
 
 export default function NewsCard({ article }: NewsCardProps) {
   return (
-    
-      href={article.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-shadow"
+    <div
+      onClick={() => window.open(article.url, "_blank")}
+      className="block bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-shadow cursor-pointer"
     >
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs text-gray-400">{article.source}</span>
@@ -29,14 +29,14 @@ export default function NewsCard({ article }: NewsCardProps) {
           </span>
         )}
       </div>
-      <h3 className="text-sm font-semibold text-gray-800 mb-1 line-clamp-2">
+      <h3 className="text-sm font-semibold text-gray-800 mb-1">
         {article.title}
       </h3>
       {article.description && (
-        <p className="text-xs text-gray-600 line-clamp-2">
+        <p className="text-xs text-gray-600">
           {article.description}
         </p>
       )}
-    </a>
+    </div>
   );
 }

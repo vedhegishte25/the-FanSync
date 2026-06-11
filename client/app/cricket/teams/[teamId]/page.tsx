@@ -4,7 +4,7 @@ import Spinner from "@/components/common/Spinner";
 import apiClient from "@/lib/apiClient";
 import { useEffect, useState } from "react";
 
-export default function FootballTeamPage({
+export default function CricketTeamPage({
   params,
 }: {
   params: { teamId: string };
@@ -17,7 +17,7 @@ export default function FootballTeamPage({
     async function load() {
       try {
         setLoading(true);
-        const result = await apiClient.get(`/football/teams/${params.teamId}`);
+        const result = await apiClient.get(`/cricket/teams/${params.teamId}`);
         setData(result.data);
       } catch (err) {
         setError("Failed to fetch team details.");
@@ -48,7 +48,7 @@ export default function FootballTeamPage({
           </p>
           <p className="text-sm text-gray-600">
             <span className="font-medium">Sport:</span>{" "}
-            {data?.sport ?? "Football"}
+            {data?.sport ?? "Cricket"}
           </p>
         </div>
       </div>
