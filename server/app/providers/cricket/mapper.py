@@ -1,4 +1,5 @@
 def map_match(match: dict) -> dict:
+    teams = match.get("teams", [])
     return {
         "external_id": match.get("id"),
         "sport": "cricket",
@@ -7,12 +8,8 @@ def map_match(match: dict) -> dict:
         "match_type": match.get("matchType"),
         "venue": match.get("venue"),
         "date": match.get("date"),
-        "home_team": {
-            "name": match.get("teams", [None, None])[0],
-        },
-        "away_team": {
-            "name": match.get("teams", [None, None])[1],
-        },
+        "home_team": {"name": teams[0] if len(teams) > 0 else "TBD"},
+        "away_team": {"name": teams[1] if len(teams) > 1 else "TBD"},
         "score": match.get("score", []),
     }
 

@@ -1,3 +1,4 @@
+import GitHubButton from "@/components/common/GitHubButton";
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import type { Metadata } from "next";
@@ -25,6 +26,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <GitHubButton />
         </div>
       </body>
     </html>

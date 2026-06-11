@@ -8,15 +8,12 @@ async def get_standings_by_league(league_name: str, season: int):
     if not league_id:
         return {"error": f"League '{league_name}' not found"}
 
-    standings = await get_football_standings(league_id, season)
-    return standings
+    try:
+        standings = await get_football_standings(league_id, season)
+        return standings
+    except Exception as e:
+        return {"error": str(e)}
 
 
 async def get_all_standings(season: int):
-    all_standings = {}
-
-    for league_name, league_id in FOOTBALL_LEAGUES.items():
-        standings = await get_football_standings(league_id, season)
-        all_standings[league_name] = standings
-
-    return all_standings
+    return {"message": "Please select a specific league from the standings page."}

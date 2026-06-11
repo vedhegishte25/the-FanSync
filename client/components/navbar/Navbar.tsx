@@ -8,6 +8,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/live", label: "Live" },
   { href: "/football", label: "Football" },
+  { href: "/football/leagues/fifa_world_cup", label: "⚽ FIFA World Cup" },
   { href: "/cricket", label: "Cricket" },
   { href: "/standings", label: "Standings" },
   { href: "/news", label: "News" },
@@ -30,7 +31,11 @@ export default function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-colors",
-                pathname === link.href
+                link.label === "⚽ FIFA World Cup"
+                  ? pathname === link.href
+                    ? "text-yellow-600"
+                    : "text-yellow-500 hover:text-yellow-600"
+                  : pathname === link.href
                   ? "text-green-600"
                   : "text-gray-600 hover:text-green-600"
               )}
