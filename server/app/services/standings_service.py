@@ -9,11 +9,19 @@ async def get_standings_by_league(league_name: str, season: int):
         return {"error": f"League '{league_name}' not found"}
 
     try:
-        standings = await get_football_standings(league_id, season)
+        data = await get_football_standings(league_id, season)
+        if not data:
+            return []
+        # API-Football nests standings inside response[0].league.standings[0]
+        standings = (
+            data[0]
+            .get("league", {})
+            .get("standings", [[]])[0]
+        )
         return standings
     except Exception as e:
         return {"error": str(e)}
 
 
 async def get_all_standings(season: int):
-    return {"message": "Please select a specific league from the standings page."}
+    return {"message": "Please select a specific league."}
