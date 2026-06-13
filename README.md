@@ -48,17 +48,18 @@ The FIFA World Cup 2026 page is the most premium section of FanSync. When you na
 ## Live Matches
 <img width="941" height="427" alt="Screenshot 2026-06-14 014359" src="https://github.com/user-attachments/assets/b3158aeb-6a4d-4bd4-b4a4-0789bd3b9ff9" />
 <br>
+The Live Matches page aggregates real-time scores from both football and cricket in a single unified view. Football data is sourced from API-Football covering hundreds of leagues worldwide, while cricket data comes from CricAPI covering international and domestic matches. Scores and match statuses refresh automatically every 2 hours in the background without requiring a page reload.
+<br>
 <img width="949" height="437" alt="Screenshot 2026-06-14 014428" src="https://github.com/user-attachments/assets/e1babfe9-975a-4156-889c-74175a03976b" />
 
-The Live Matches page aggregates real-time scores from both football and cricket in a single unified view. Football data is sourced from API-Football covering hundreds of leagues worldwide, while cricket data comes from CricAPI covering international and domestic matches. Scores and match statuses refresh automatically every 2 hours in the background without requiring a page reload.
 
 ---
 ## News and Insights
 <img width="947" height="435" alt="Screenshot 2026-06-14 014515" src="https://github.com/user-attachments/assets/ca9af3f1-73cb-49c5-b4d5-295b10b1b777" />
 <br>
-<img width="947" height="434" alt="Screenshot 2026-06-14 014536" src="https://github.com/user-attachments/assets/6a67bd7e-46cc-41d2-b11f-529707e866e6" />
-
 FanSync's Insights section automatically generates short match summaries from live data, giving you a quick snapshot of what's happening across ongoing football and cricket matches. It pulls real-time scores and match statuses and turns them into readable updates without you having to dig through raw stats. Insights refresh every 2 hours alongside the live scores.
+<br>
+<img width="947" height="434" alt="Screenshot 2026-06-14 014536" src="https://github.com/user-attachments/assets/6a67bd7e-46cc-41d2-b11f-529707e866e6" />
 
 ---
 ## Getting Started
